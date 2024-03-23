@@ -3,7 +3,9 @@
 import requests  
 import notify  
 from datetime import datetime  
-  
+
+cron:1 10 * * * DailyNews.py
+
 url = 'https://60s.viki.moe/?encoding=text'  
 resp = requests.get(url)  
   
