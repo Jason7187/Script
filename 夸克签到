@@ -1,6 +1,6 @@
 '''
 new Env('夸克自动签到')
-cron: 0 9 * * *
+
 
 受大佬 @Cp0204 的仓库项目启发改编
 源码来自 GitHub 仓库：https://github.com/Cp0204/quark-auto-save
