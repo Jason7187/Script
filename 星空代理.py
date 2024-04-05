@@ -3,8 +3,6 @@ import os
 import logging
 import notify
 
-cron "20 7 * * *" script-path=xkdaili.py
-
 # 控制是否启用通知的变量
 enable_notification = 1
 
