@@ -1,19 +1,7 @@
 import requests, json 
 import os
 import logging
-import notify
 
-# 控制是否启用通知的变量
-enable_notification = 1
-
-# 只有在需要发送通知时才尝试导入notify模块
-if enable_notification == 1:
-    try:
-        from notify import send
-    except ModuleNotFoundError:
-        print("警告：未找到notify.py模块。它不是一个依赖项，请勿错误安装。程序将退出。")
-        sys.exit(1)
-        
 # 设置变量 xk_username 和 xk_password
 
 xk_username= os.getenv("xk_username").split('&')
@@ -68,9 +56,3 @@ for i in range(len(xk_username)):
     html_sign = requests.post(url=url_sign, headers=headers_sign, data=data_sign, verify=False)
     result = json.loads(html_sign.text)['msg']
     print(result)
-
-        # 如果需要发送通知
-    if enable_notification == 1:
-        send("星空代理-通知",result)
-  
-    
